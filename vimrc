@@ -10,8 +10,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 if filereadable(expand("~/.vim/vimrc.bundles"))
-	source ~/.vim/vimrc.bundles
-	source ~/.vim/vimrc.bundles.local
+    source ~/.vim/vimrc.bundles
+    source ~/.vim/vimrc.bundles.local
 endif
 set autoindent
 set autoread                                                        " Reload files when changed on disk, i.e. via `git checkout`.
@@ -31,7 +31,7 @@ set scrolloff=3                                                     " Show conte
 set shiftwidth=4                                                    " Normal mode indentation commands use 2 spaces.
 set showcmd
 set smartcase                                                       " Case-sensitive search if any caps.
-set softtabstop=2                                                   " Insert mode tab and backspace use 2 spaces.
+set softtabstop=4                                                   " Insert mode tab and backspace use 2 spaces.
 set tabstop=8                                                       " Actual tabs occupy 8 characters.
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.pyc,*.rbc
 set wildmenu                                                        " Show a navigable menu for tab completion
@@ -57,6 +57,7 @@ nnoremap <leader>] :TagbarToggle<CR>
 nnoremap <leader>g :GitGutterToggle<CR>
 nnoremap <leader>c <Plug>Kwbd
 nnoremap <silent> <leader>V :source ~/.vimrc<CR>:filetype dtect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+map <F7> mzgg=G`z
 
 " Plugin settings
 let g:ctrlp_match_window = 'order:ttb, max:20'
@@ -74,7 +75,7 @@ vnoremap p "_dP
 
 " Go crazy!
 if filereadable(expand("~/.vim/vimrc.local"))
-  source ~/.vim/vimrc.local
+    source ~/.vim/vimrc.local
 endif
 
 call vundle#end()
