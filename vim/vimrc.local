@@ -215,3 +215,5 @@ set nowrap
 set splitbelow
 set splitright
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+let g:auto_save = 1
+let g:auto_save_no_updatetime = 1

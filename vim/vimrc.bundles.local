@@ -28,3 +28,4 @@ Plugin 'osyo-manga/vim-watchdogs'
 Plugin 'troydm/asyncfinder.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'vim-scripts/vim-auto-save'
