@@ -61,7 +61,7 @@ nnoremap <c-K> yy<up>p
 
 " highlight search
 set hlsearch
-"nmap <leader>hl :let @/ = ""<CR>
+nmap <leader>hl :let @/ = ""<CR>
 
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
@@ -69,7 +69,7 @@ colorscheme desert
 endif
 
 " Disambiguate ,a & ,t from the Align plugin, making them fast again.
-"
+
 " This section is here to prevent AlignMaps from adding a bunch of mappings
 " that interfere with the very-common ,a and ,t mappings. This will get run
 " at every startup to remove the AlignMaps for the *next* vim startup.

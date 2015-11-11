@@ -20,7 +20,7 @@ set backupcopy=yes                                                  " See :help 
 set clipboard=unnamed                                               " Yank and paste with the system clipboard.
 set directory-=.                                                    " Don't store swap files in current directory.
 set encoding=utf-8
-set expandtab                                                       " Expand tabs to spaces.
+"set expandtab                                                       " Expand tabs to spaces.
 set ignorecase                                                      " Case-insensitive search.
 set incsearch                                                       " Search as I type.
 set laststatus=2                                                    " Always show statusline.
@@ -51,6 +51,7 @@ nnoremap <leader>a :Ag<space>
 nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>o :NERDTreeMapActivateNode<CR>
 nnoremap <leader>t :CtrlP<CR>
 nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nnoremap <leader>] :TagbarToggle<CR>
