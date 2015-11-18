@@ -45,6 +45,9 @@ inoremap ff <ESC>:w<CR>i
 inoremap ;; <ESC>A
 inoremap qq <ESC>:w<CR>:q<CR>
 inoremap <F7> <ESC>mzgg=G`zA
+inoremap <leader>r <%=   %><left><left><left><left> 
+inoremap <leader>R <%   %><left><left><left><left> 
+
 
 " NORMAL mode mappings
 nnoremap ;; A
