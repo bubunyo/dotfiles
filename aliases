@@ -1,0 +1,8 @@
+alias install="sudo apt-get install"
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
+alias idea="idea-IU-141.1532.4/bin/idea.sh"
+alias brake="./bin/rake"
+alias brails="./bin/rails"
+alias v="vim"
+alias android-studio="~/android-studio-1.5.1/bin/studio.sh"

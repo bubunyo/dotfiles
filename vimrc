@@ -1,3 +1,5 @@
+syntax enable
+
 set term=screen-256color
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -28,11 +30,11 @@ set laststatus=2                                                    " Always sho
 set number                                                          " Show line number.
 set ruler                                                           " Show where you are.
 set scrolloff=3                                                     " Show content above/below cursorline.
-set shiftwidth=4                                                    " Normal mode indentation commands use 2 spaces.
+set shiftwidth=2                                                    " Normal mode indentation commands use 2 spaces.
 set showcmd
 set smartcase                                                       " Case-sensitive search if any caps.
-set softtabstop=4                                                   " Insert mode tab and backspace use 2 spaces.
-set tabstop=8                                                       " Actual tabs occupy 8 characters.
+set softtabstop=2                                                   " Insert mode tab and backspace use 2 spaces.
+set tabstop=4                                                       " Actual tabs occupy 8 characters.
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.pyc,*.rbc
 set wildmenu                                                        " Show a navigable menu for tab completion
 set wildmode=longest,list,full

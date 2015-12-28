@@ -32,21 +32,23 @@ let NERDTreeIgnore=['node_modules$[[dir]]', 'bower_components$[[dir]]']
 
 " autocmds
 autocmd bufreadpre *.md setlocal textwidth=80
+autocmd bufread,bufreadpre *.coffee set syntax=coffee
 
 " Space indentation for filetypes.
 autocmd bufreadpre *.go set shiftwidth=4 softtabstop=4
 autocmd bufreadpre *.c  set shiftwidth=8 softtabstop=8
+autocmd bufreadpre *.coffee set syntax=coffee
 
 " Keyboard shortcuts
 " INSERT mode mappings
 inoremap jj <ESC>
 inoremap gg <c-o>O
-inoremap ff <ESC>:w<CR>i
+inoremap ff <ESC>:w<CR><Right>i
 inoremap ;; <ESC>A
 inoremap qq <ESC>:w<CR>:q<CR>
 inoremap <F7> <ESC>mzgg=G`zA
-inoremap <leader>r <%=   %><left><left><left><left> 
-inoremap <leader>R <%   %><left><left><left><left> 
+inoremap <leader>r <%=  %><left><left><left><left> 
+inoremap <leader>R <%  %><left><left><left><left> 
 
 
 " NORMAL mode mappings
@@ -217,6 +219,6 @@ let g:airline_powerline_fonts = 1
 set nowrap
 set splitbelow
 set splitright
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 let g:auto_save = 1
 let g:auto_save_no_updatetime = 1
