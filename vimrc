@@ -1,5 +1,4 @@
 syntax enable
-
 set term=screen-256color
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -83,6 +82,8 @@ endif
 
 call vundle#end()
 " Ensure ftdetect et al work by including this after the Vundle stuff.
+syntax on
+filetype off
 filetype plugin indent on
 
 " Use the VividChalk Color Scheme.
@@ -96,3 +97,4 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
+
