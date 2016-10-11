@@ -91,3 +91,4 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 # include .zshrc if it exists
 source ~/.env
+export PATH=/home/bubu/swift/usr/bin:"${PATH}"

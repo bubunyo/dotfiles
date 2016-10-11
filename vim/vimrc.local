@@ -49,6 +49,7 @@ inoremap qq <ESC>:w<CR>:q<CR>
 inoremap <F7> <ESC>mzgg=G`zA
 inoremap <leader>r <%=  %><left><left><left><left> 
 inoremap <leader>R <%  %><left><left><left><left> 
+inoremap yy <C-y>,
 
 
 " NORMAL mode mappings
@@ -70,7 +71,7 @@ nmap <leader>hl :let @/ = ""<CR>
 
 " gui settings
 if (&t_Co == 256 || has('gui_running'))
-colorscheme desert
+colorscheme ron
 endif
 
 " Disambiguate ,a & ,t from the Align plugin, making them fast again.
@@ -213,8 +214,9 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 let g:ag_working_path_mode="r"
 
 "Airlinetheme  dark
-let g:airline_theme='dark'
+let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
+let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
 
 set nowrap
 set splitbelow
