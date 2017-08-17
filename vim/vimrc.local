@@ -224,3 +224,6 @@ set splitright
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 let g:auto_save = 1
 let g:auto_save_no_updatetime = 1
+let g:syntastic_javascript_checkers = ['eslint']
+nnoremap <silent> <leader>es :Esformatter<CR>
+vnoremap <silent> <leader>es :EsformatterVisual<CR>
