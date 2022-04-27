@@ -8,3 +8,16 @@ alias v="vim"
 alias android-studio="~/android-studio-2.0/bin/studio.sh"
 alias python="python3"
 alias pip="pip3"
+alias gfrm="git fetch --prune && git rebase origin/master"
+function to_deploy ()
+{
+    declare -r mains=$(go list -json ./... | jq --compact-output '. | select(.Name == "main") | {ImportPath: .ImportPath, Deps: .Deps}');
+    declare -r changed=($(git diff --name-only origin/master...HEAD             | grep -v '_test.go$'           | grep '.go$'           | xargs -I % dirname %          | sort -u               ));
+    to_deploy=();
+    for pkg in ${changed[@]};
+    do
+        to_deploy+=($(echo "$mains" | jq --raw-output ". | select(.Deps[] | endswith(\"$pkg\")) | .ImportPath"));
+    done;
+    echo ${to_deploy[@]} | tr ' ' '\n' | sort -u
+}
+alias grbom="git checkout master && git pull && git checkout - && git rebase master"
