@@ -1,19 +1,3 @@
-syntax enable
-set term=screen-256color
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-if filereadable(expand("~/.vim/vimrc.bundles"))
-    source ~/.vim/vimrc.bundles
-    source ~/.vim/vimrc.bundles.local
-endif
 set autoindent
 set autoread                                                        " Reload files when changed on disk, i.e. via `git checkout`.
 set backspace=2                                                     " Fix broken backspace in some setups.
@@ -60,41 +44,4 @@ nnoremap <leader>g :GitGutterToggle<CR>
 nnoremap <leader>c <Plug>Kwbd
 nnoremap <silent> <leader>V :source ~/.vimrc<CR>:filetype dtect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 map <F7> mzgg=G`z
-
-" Plugin settings
-let g:ctrlp_match_window = 'order:ttb, max:20'
-let g:NERDSpaceDelims=1
-let g:gitgutter_enabled = 0
-
-" Applying sudo
-cnoremap w!! %!sudo tee > /dev/null %
-
-" Automatically rebalance windows on Vim resize.
-autocmd VimResized * :wincmd =
-
-" Don't copy contents of an overwritten selection.
-vnoremap p "_dP
-
-" Go crazy!
-if filereadable(expand("~/.vim/vimrc.local"))
-    source ~/.vim/vimrc.local
-endif
-
-call vundle#end()
-" Ensure ftdetect et al work by including this after the Vundle stuff.
-syntax on
-filetype off
-filetype plugin indent on
-
-" Use the VividChalk Color Scheme.
-" colorscheme elflord   " Hack to get the black background to stay around.
-" colorscheme vividchalk
-
-"trying to set solarized
-set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme ron
 

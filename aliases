@@ -21,3 +21,4 @@ function to_deploy ()
     echo ${to_deploy[@]} | tr ' ' '\n' | sort -u
 }
 alias grbom="git checkout master && git pull && git checkout - && git rebase master"
+alias adjust_vpn_connect="sudo openconnect -u bubunyo.nyavor --authgroup=1 --passwd-on-stdin office.adjustinfra.network < ${HOME}/.adjustsec"
